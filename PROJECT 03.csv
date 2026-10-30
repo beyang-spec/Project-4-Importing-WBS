@@ -1,0 +1,53 @@
+﻿WBS Code,Task / Subtask,Description,Assigned Dev,Duration (days),Predecessor(s),Start Date (Planned),Deadline (Planned),Date Started (Actual),Date Finished (Actual),Status
+0,Project Planning & Design,,,,-,26-Aug-26,07-Oct-26,29/08/2026,07/10/2026,Complete
+0.1,    Requirements Gathering,"Confirm project scope, user needs, and functional requirements",Bhebin Austria,1,-,26-Aug-26,09-Sep-26,29/08/2026,09/09/2026,Complete
+0.2,    System Architecture & Workflow,"Plan HTML/CSS/JavaScript frontend, PHP backend, and MySQL database",Bhebin Austria,1,0.1,30-Sep-26,07-Oct-26,01/10/2026,07/10/2026,Complete
+0.3,    Database Design,"Design tables for users, products, sales, sale items, and stock records",Beatriz Madrona,1,0.1,30-Sep-26,07-Oct-26,01/10/2026,07/10/2026,Complete
+0.4,    UI/UX Wireframes,"Sketch login, dashboard, product, checkout, and report screens",Jennylyn Gerardo,1,0.1,30-Sep-26,07-Oct-26,02/10/2026,07/10/2026,Complete
+1,Login & Account Module,,,1,-,28-Oct-26,03-Nov-26,,,Not Started
+1.1,    Build Login and Registration Screens,Create responsive login and account creation forms,Jennylyn Gerardo,1,0.4,28-Oct-26,28-Oct-26,,,Not Started
+1.1.1,        Form Validation,Validate required fields and input formats on client and server,Bhebin Austria,1,1.1,29-Oct-26,29-Oct-26,,,Not Started
+1.1.2,        Password Security,Hash passwords and verify credentials securely in PHP,Bhebin Austria,1,1.1.1,30-Oct-26,30-Oct-26,,,Not Started
+1.1.3,        PHP Session Handling,Create sessions and protect pages from unauthenticated access,Bhebin Austria,1,1.1.2,02-Nov-26,02-Nov-26,,,Not Started
+1.2,    Forgot Password and Logout,Provide account recovery flow and secure logout,Beatriz Madrona,1,1.1.3,03-Nov-26,03-Nov-26,,,Not Started
+2,Product Registration & Inventory Module,,,1,-,28-Oct-26,05-Nov-26,,,Not Started
+2.1,    Register Product,"Create product form for name, barcode, category, price, and stock",Jennylyn Gerardo,1,0.3,28-Oct-26,28-Oct-26,,,Not Started
+2.1.1,        Validate Product Fields,"Check required values, numeric prices, and unique barcode",Jennylyn Gerardo,1,2.1,29-Oct-26,29-Oct-26,,,Not Started
+2.1.2,        Save Product to MySQL,Use prepared statements to insert product records,Beatriz Madrona,1,2.1.1,30-Oct-26,30-Oct-26,,,Not Started
+2.2,    Search and View Products,Display products with keyword/barcode search,Beatriz Madrona,1,2.1.2,02-Nov-26,02-Nov-26,,,Not Started
+2.2.1,        Product List and Details,"Show product name, barcode, selling price, and stock quantity",Jessabel Mantilla,1,2.2,03-Nov-26,03-Nov-26,,,Not Started
+2.2.2,        Edit Product Information,Update product details and stock quantity safely,Bhebin Austria,1,2.2.1,04-Nov-26,04-Nov-26,,,Not Started
+2.3,    Stock Monitoring,Show current stock and flag low-stock products,Bhebin Austria,1,2.2.2,05-Nov-26,05-Nov-26,,,Not Started
+3,Barcode Scanner Module,,,1,-,04-Nov-26,10-Nov-26,,,Not Started
+3.1,    Barcode Scanner Interface,Build scan screen and camera permission guidance,Bhebin Austria,1,2.2.1,04-Nov-26,04-Nov-26,,,Not Started
+3.1.1,        Camera Barcode Scanning,Read product barcodes using a supported browser camera library,Bhebin Austria,1,3.1,05-Nov-26,06-Nov-26,,,Not Started
+3.1.2,        Find Product by Barcode,Look up the scanned code in the MySQL product records,Beatriz Madrona,1,3.1.1,09-Nov-26,09-Nov-26,,,Not Started
+3.1.3,        Handle Invalid or Unknown Codes,Show a clear message when a barcode cannot be read or is not registered,Jessabel Mantilla,1,3.1.2,10-Nov-26,10-Nov-26,,,Not Started
+4,Sales & Checkout Module,,,1,-,11-Nov-26,23-Nov-26,,,Not Started
+4.1,    Sell Products,Allow products to be added to a sale by scan or search,Jessabel Mantilla,1,3.1.3,11-Nov-26,11-Nov-26,,,Not Started
+4.1.1,        Shopping Cart,"Add, remove, and change quantities of cart items",Jessabel Mantilla,1,4.1,12-Nov-26,12-Nov-26,,,Not Started
+4.1.2,        Calculate Total,Calculate line totals and overall amount without discount features,Beatriz Madrona,1,4.1.1,13-Nov-26,13-Nov-26,,,Not Started
+4.2,    Checkout and Payment Recording,Confirm the sale and record the payment details,Jennylyn Gerardo,11,4.1.2,16-Nov-26,16-Nov-26,,,Not Started
+4.2.1,        Validate Stock Before Checkout,Prevent checkout when requested quantity exceeds available stock,Bhebin Austria,1,4.2,17-Nov-26,17-Nov-26,,,Not Started
+4.2.2,        Save Sale and Sale Items,Store the transaction and its item details in MySQL,Bhebin Austria,1,4.2.1,18-Nov-26,18-Nov-26,,,Not Started
+4.2.3,        Update Inventory Automatically,Reduce product stock only after a successful sale,Beatriz Madrona,1,4.2.2,19-Nov-26,19-Nov-26,,,Not Started
+4.2.4,        Generate Receipt,"Display a printable receipt with items, quantities, and totals",Jennylyn Gerardo,1,4.2.3,20-Nov-26,20-Nov-26,,,Not Started
+4.3,    Sales History,Display past transactions and their details,Jessabel Mantilla,1,4.2.4,23-Nov-26,23-Nov-26,,,Not Started
+5,Sales & Profit Reports Module,,,1,-,24-Nov-26,26-Nov-26,,,Not Started
+5.1,    Sales Summary,"Summarize sales by day, week, month, and year",Bhebin Austria,1,4.3,24-Nov-26,24-Nov-26,,,Not Started
+5.2,    Profit Reports,Calculate estimated profit using recorded cost and selling prices,Beatriz Madrona,1,5.1,25-Nov-26,25-Nov-26,,,Not Started
+5.3,    Report Filters,Allow filtering by date range and viewing transaction details,Beatriz Madrona,1,5.2,26-Nov-26,26-Nov-26,,,Not Started
+6,Dashboard & Settings Module,,,1,-,27-Nov-26,01-Dec-26,,,Not Started
+6.1,    Dashboard,"Show useful summary cards for sales, products, and low stock",Jennylyn Gerardo,1,5.3,27-Nov-26,27-Nov-26,,,Not Started
+6.2,    Navigation and Responsive Layout,"Create clear navigation for selling, products, inventory, reports, and settings",Bhebin Austria,1,6.1,30-Nov-26,30-Nov-26,,,Not Started
+6.3,    Account and Settings Screen,Show account details and provide logout option,Bhebin Austria,1,6.2,01-Dec-26,01-Dec-26,,,Not Started
+7,Testing & Quality Assurance,,,1,-,02-Dec-26,08-Dec-26,,,Not Started
+7.1,    Functional Testing,"Test login, product registration, search, scanning, checkout, and reports",Jessabel Mantilla,1,6.3,02-Dec-26,04-Dec-26,,,Not Started
+7.2,    Database and Security Testing,"Check prepared statements, sessions, validation, and stock calculations",Jessabel Mantilla,1,7.1,05-Dec-26,05-Dec-26,,,Not Started
+7.3,    Usability and Responsive Testing,"Test layout on desktop, tablet, and phone-sized screens",Jessabel Mantilla,1,7.2,06-Dec-26,06-Dec-26,,,Not Started
+7.4,    Bug Fixes and Retesting,Correct discovered defects and rerun relevant tests,Bhebin Austria,1,7.3,07-Dec-26,07-Dec-26,,,Not Started
+7.5,    User Acceptance Testing,Demonstrate the completed system and record approval,Bhebin Austria,1,7.4,08-Dec-26,08-Dec-26,,,Not Started
+8,Deployment & Handover,,,1,-,09-Dec-26,11-Dec-26,,,Not Started
+8.1,    XAMPP and Database Setup,Configure project under C:\xampp\htdocs\grocery-store and import SQL database,Beatriz Madrona,1,7.5,09-Dec-26,09-Dec-26,,,Not Started
+8.2,    Final Deployment Check,Verify the application runs locally and all core functions work,Jessabel Mantilla,1,8.1,10-Dec-26,10-Dec-26,,,Not Started
+8.3,    Documentation and Handover,Prepare user instructions and final project documentation,Bhebin Austria,1,8.2,11-Dec-26,11-Dec-26,,,Not Started
